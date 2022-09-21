@@ -17,7 +17,7 @@ public class TipCalc {
 
         double totalPerPerson = Math.round((tipPerPerson + bill / numOfPpl) * 100.00) / 100.00;
 
-        System.out.println("Tip per person: $" + tipPercent);
+        System.out.println("Tip per person: $" + tipPerPerson);
         System.out.println("Total per person: $" + totalPerPerson);
     }
 }
