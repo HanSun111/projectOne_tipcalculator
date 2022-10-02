@@ -12,12 +12,14 @@ public class TipCalc {
         System.out.print("please input number of people in your party: ");
         int numOfPpl = calculator.nextInt();
 
-        double tipPerPerson = Math.round(((tipPercent/100.00) * bill) * 100.00) / 100.00;
-
-
-        double totalPerPerson = Math.round((tipPerPerson + (bill / numOfPpl)) * 100.00) / 100.00;
-
+        double totalTip = Math.round(((tipPercent / 100.00) * bill) * 100.00) / 100.00;
+        double totalPerPerson = Math.round(((totalTip + bill) / numOfPpl) * 100.00) / 100.00;
+        double tipPerPerson = totalTip / numOfPpl;
+        System.out.println("Total tip: $" + String.format("%.2f", totalTip));
         System.out.println("Tip per person: $" + String.format("%.2f", tipPerPerson));
-        System.out.println("Total per person: $" + String.format("%.2f" , totalPerPerson));
+        System.out.println("Total amount: $" + String.format("%.2f", totalTip + bill));
+        System.out.println("Total per person: $" + String.format("%.2f", totalPerPerson));
+
+
     }
 }
